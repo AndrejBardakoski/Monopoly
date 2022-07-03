@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F8AB9469-CAC5-4372-83E2-A2A70CD975E3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Monopoly</RootNamespace>
+    <AssemblyName>Monopoly</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuyProperty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuyProperty.Designer.cs">
+      <DependentUpon>BuyProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInitGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInitGame.Designer.cs">
+      <DependentUpon>FormInitGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameOverForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameOverForm.Designer.cs">
+      <DependentUpon>GameOverForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HowToPlayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HowToPlayForm.Designer.cs">
+      <DependentUpon>HowToPlayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PropertySpecial.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyCity.cs" />
+    <Compile Include="PropertyTile.cs" />
+    <Compile Include="Rent.cs" />
+    <Compile Include="RentAirline.cs" />
+    <Compile Include="RentCity.cs" />
+    <Compile Include="RentUtility.cs" />
+    <Compile Include="RNG.cs" />
+    <Compile Include="Scene.cs" />
+    <Compile Include="SceneMain.cs" />
+    <Compile Include="SceneMenu.cs" />
+    <Compile Include="SpecialTile.cs" />
+    <Compile Include="Tile.cs" />
+    <Compile Include="InfoBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoBox.Designer.cs">
+      <DependentUpon>InfoBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TradeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradeForm.Designer.cs">
+      <DependentUpon>TradeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TradeOfferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradeOfferForm.Designer.cs">
+      <DependentUpon>TradeOfferForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BuyProperty.resx">
+      <DependentUpon>BuyProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInitGame.resx">
+      <DependentUpon>FormInitGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameOverForm.resx">
+      <DependentUpon>GameOverForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HowToPlayForm.resx">
+      <DependentUpon>HowToPlayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoBox.resx">
+      <DependentUpon>InfoBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradeForm.resx">
+      <DependentUpon>TradeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradeOfferForm.resx">
+      <DependentUpon>TradeOfferForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AirplaneIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\electrycityIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waterIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chanceIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supriceIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bingoIcno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goToJailIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jail icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parkingIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\startIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taxIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batMan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batManSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IronMan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IronManSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninjaTuttle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninjaTuttleSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spiderman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spidermanSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ultron.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UltronSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wolverine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wolverineSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WonderWoman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WonderWomanSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MonopolyText.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonClick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dice1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dice2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dice3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dice4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dice5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dice6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpecialDiceMin .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpecialDiceMultiply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpecialDiceNext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpecialDiceRoll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpecialDiceStop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpecialDiceSuprice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hotel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\House1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\House2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\House3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\House4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mortage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EndGameScreen.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
